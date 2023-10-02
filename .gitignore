@@ -13,3 +13,22 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Visual Studio
+*.sln
+*.csproj
+
+# ReSharper Personal Config
+*.DotSettings.user
+
+# Visual Studio Code
+.vscode/
+obj/
+
+# Rider
+.idea/
+
+# Windows File Explorer Thumbnail Cache
+Thumbs.db
+# Mac Finder Cache
+.DS_Store

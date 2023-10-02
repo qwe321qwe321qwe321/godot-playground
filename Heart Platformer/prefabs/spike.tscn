@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpiyh85nt5mj5"]
+
+[ext_resource type="PackedScene" uid="uid://dpdqm57yld8eq" path="res://prefabs/hazard_area.tscn" id="1_hvgsg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lm2p1"]
+size = Vector2(20, 10)
+
+[node name="Spike" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-16, 0, -8, -16, 0, 0, 8, -16, 16, 0)
+
+[node name="HazardArea" parent="." instance=ExtResource("1_hvgsg")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HazardArea"]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_lm2p1")

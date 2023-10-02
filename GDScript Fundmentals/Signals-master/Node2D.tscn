@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://bf6qgxwpe4dcv"]
+
+[ext_resource type="Script" path="res://SceneScript.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://2t7rnvphgq6l" path="res://icon.png" id="2"]
+[ext_resource type="Script" path="res://PlayerScript.gd" id="3"]
+[ext_resource type="Script" path="res://Node2D.gd" id="4"]
+[ext_resource type="Script" path="res://new_script.cs" id="5_ykmce"]
+
+[node name="Health" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Player1" type="Sprite2D" parent="."]
+position = Vector2(313.6, 251.4)
+texture = ExtResource("2")
+script = ExtResource("3")
+
+[node name="GameOver" type="Node2D" parent="."]
+script = ExtResource("4")
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("5_ykmce")
