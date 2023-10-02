@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://kd740taeixkq"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_esdkv"]
+[ext_resource type="PackedScene" uid="uid://6xy7224w411x" path="res://prefabs/player.tscn" id="2_q8gr4"]
+[ext_resource type="PackedScene" uid="uid://cpiyh85nt5mj5" path="res://prefabs/spike.tscn" id="3_110qk"]
+[ext_resource type="PackedScene" uid="uid://crmt43q4irt51" path="res://prefabs/heart.tscn" id="4_isprm"]
+[ext_resource type="PackedScene" uid="uid://bts5ss50p1ti8" path="res://prefabs/level_completed_ui.tscn" id="5_hn0ll"]
+[ext_resource type="PackedScene" uid="uid://u3ggdr3oh813" path="res://prefabs/level_tile_map.tscn" id="6_2cfts"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_esdkv")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_q8gr4")]
+position = Vector2(-136, -72)
+
+[node name="Spike" parent="." instance=ExtResource("3_110qk")]
+position = Vector2(-72, 48)
+
+[node name="Spike2" parent="." instance=ExtResource("3_110qk")]
+position = Vector2(88, 64)
+
+[node name="Heart" parent="." instance=ExtResource("4_isprm")]
+position = Vector2(-104, -8)
+
+[node name="Heart2" parent="." instance=ExtResource("4_isprm")]
+position = Vector2(-32, 8)
+
+[node name="Heart3" parent="." instance=ExtResource("4_isprm")]
+position = Vector2(8, -8)
+
+[node name="Heart4" parent="." instance=ExtResource("4_isprm")]
+position = Vector2(51, -24)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelCompleted" parent="CanvasLayer" instance=ExtResource("5_hn0ll")]
+visible = false
+
+[node name="LevelTileMap" parent="." instance=ExtResource("6_2cfts")]
+layer_0/tile_data = PackedInt32Array(-262154, 196608, 0, -196618, 196608, 1, -131082, 196608, 1, -65546, 262144, 2, -10, 0, 1, 65526, 0, 1, 131062, 0, 1, 196598, 0, 1, 262134, 0, 1, 327670, 0, 1, 393206, 0, 2, 393207, 65536, 2, 393208, 65536, 2, 393209, 65536, 2, 393210, 65536, 2, 393211, 65536, 2, 393212, 65536, 2, 393213, 65536, 2, 393214, 65536, 2, 393215, 65536, 2, 327680, 65536, 2, 327681, 65536, 2, 327682, 65536, 2, 327683, 65536, 2, 327684, 65536, 2, 327685, 65536, 2, 327686, 65536, 2, 327687, 65536, 2, 327688, 65536, 2, 262152, 65536, 1, 262153, 131072, 1, 327689, 131072, 2, 262151, 393216, 2, 262150, 65536, 0, 262149, 65536, 0, 262148, 65536, 0, 262147, 327680, 2, 262146, 65536, 1, 262145, 65536, 1, 262144, 65536, 1, 327679, 65536, 1, 327678, 65536, 1, 327677, 65536, 1, 327676, 65536, 1, 327675, 65536, 1, 327674, 65536, 1, 327673, 65536, 1, 327672, 65536, 1, 327671, 65536, 1, 262135, 65536, 1, 262136, 65536, 1, 262137, 327680, 2, 262138, 65536, 0, 262139, 65536, 0, 262140, 65536, 0, 262141, 393216, 2, 262142, 327680, 2, 262143, 65536, 0, 196608, 393216, 2, 196609, 65536, 1, 196610, 65536, 1, 196611, 131072, 1, 196615, 0, 1, 196616, 65536, 1, 196617, 131072, 1, 131079, 0, 1, 65543, 0, 1, 7, 0, 1, -65529, 0, 1, -131065, 0, 1, -196601, 0, 0, -262136, 0, 0, -262135, 131072, 0, -196599, 131072, 1, -196600, 393216, 2, -131064, 65536, 1, -65528, 65536, 1, -65527, 131072, 1, 9, 131072, 1, 65545, 131072, 1, 131081, 131072, 1, 131080, 65536, 1, 65544, 65536, 1, -131063, 131072, 1, 8, 65536, 1, -65533, 131072, 0, 3, 131072, 1, 65539, 131072, 1, 131075, 131072, 1, -65534, 0, 0, 2, 0, 1, 65538, 393216, 2, 131074, 65536, 1, 65537, 0, 0, 131073, 393216, 2, 131072, 0, 0, 196605, 0, 0, 196606, 131072, 0, 196601, 131072, 0, 196600, 327680, 2, -9, 131072, 1, 65527, 327680, 2, 131063, 65536, 1, 196599, 65536, 1, 65528, 131072, 0, 131064, 131072, 1, -65545, 131072, 0)
