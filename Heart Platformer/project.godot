@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Heart Platformer"
-run/main_scene="res://scenes/level_one.tscn"
+run/main_scene="res://scenes/start_menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -31,6 +31,12 @@ window/stretch/mode="canvas_items"
 [dotnet]
 
 project/assembly_name="Heart Platformer"
+
+[gui]
+
+theme/custom="res://default_theme.tres"
+theme/custom_font="res://pixel_font.ttf"
+theme/default_font_subpixel_positioning=0
 
 [layer_names]
 
