@@ -82,17 +82,13 @@ text = "Ready?
 
 [node name="LevelTimeLabel" type="Label" parent="CanvasLayer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(32, 0)
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -16.0
-offset_top = 4.0
-offset_right = 16.0
-offset_bottom = 13.0
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 8.0
+offset_bottom = 17.0
 grow_horizontal = 2
-text = "0.00"
-vertical_alignment = 1
+text = "TIME"
+horizontal_alignment = 1
 
 [node name="StartCountingDownPlayer" type="AnimationPlayer" parent="."]
 process_mode = 3
@@ -100,6 +96,3 @@ autoplay = "RESET"
 libraries = {
 "": SubResource("AnimationLibrary_mhvmc")
 }
-
-[connection signal="on_pushed_next_level" from="CanvasLayer/LevelCompleted" to="." method="_on_level_completed_on_pushed_next_level"]
-[connection signal="on_pushed_retry" from="CanvasLayer/LevelCompleted" to="." method="_on_level_completed_on_pushed_retry"]
