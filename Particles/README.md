@@ -1,0 +1,2 @@
+* [Particle Systems From BEGINNER To PRO | Godot Engine](https://www.youtube.com/watch?v=F1Fyj3Lh_Pc)
+* [Why Particle Shaders Are AWESOME and How to Use Them | Godot Engine Tutorial](https://www.youtube.com/watch?v=UI9JP5TNZ94)
